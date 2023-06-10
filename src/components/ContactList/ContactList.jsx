@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { FaUserCircle } from 'react-icons/fa';
 import { BsTrash } from 'react-icons/bs';
-import { getRandomColor } from 'js/getRandomColor';
 
+import { getRandomColor } from 'js/getRandomColor';
 import css from './ContactList.module.css';
 
 export const ContactList = ({ contacts, onDeleteContact }) => {
