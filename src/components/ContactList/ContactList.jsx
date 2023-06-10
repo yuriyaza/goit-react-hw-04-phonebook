@@ -8,23 +8,23 @@ import css from './ContactList.module.css';
 export const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
-      {contacts.map(item => {
+      {contacts.map(contact => {
         return (
-          <li className={css.contactCard} key={item.id}>
+          <li className={css.contactCard} key={contact.id}>
 
             <div className={css.userIcon} style={{ color: getRandomColor() }}>
               <FaUserCircle />
             </div>
 
             <div className={css.userInfo}>
-              <div className={css.userName}>{item.name}</div>
-              <div>{item.number}</div>
+              <div className={css.userName}>{contact.name}</div>
+              <div>{contact.number}</div>
             </div>
 
             <button
               className={css.deleteButton}
               type="button"
-              onClick={()=>onDeleteContact(item.id)}>
+              onClick={()=>onDeleteContact(contact.id)}>
               <span className={css.deleteIcon}><BsTrash /></span>
             </button>
 
